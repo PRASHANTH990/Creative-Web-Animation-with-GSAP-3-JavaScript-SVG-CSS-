@@ -1,0 +1,30 @@
+…or create a new repository on the command line
+echo "# Creative-Web-Animation-with-GSAP-3-JavaScript-SVG-CSS-" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/PRASHANTH990/Creative-Web-Animation-with-GSAP-3-JavaScript-SVG-CSS-.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/PRASHANTH990/Creative-Web-Animation-with-GSAP-3-JavaScript-SVG-CSS-.git
+git branch -M main
+git push -u origin main
+
+
+GSAP core:
+https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js
+
+GSAP extra plugins :
+https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Draggable.min.js
+https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/EaselPlugin.min.js
+https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Flip.min.js
+https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js
+https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Observer.min.js
+https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/PixiPlugin.min.js
+https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js
+https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js
+https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js
+
+Extra Eases:
+https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CustomEase.min.js
