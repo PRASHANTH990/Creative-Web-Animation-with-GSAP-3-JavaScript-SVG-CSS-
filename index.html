@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   </head>
-  <body>
+  <body class="wapper">
     <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
@@ -21,6 +21,72 @@
       </p>
     <![endif]-->
     <h1>Creative Web Animation with GSAP 3</h1>
+    <hr />
+    <hr />
+    <hr />
+    <h2>Capacity in Depth : 2</h2>
+    <div class="sec content">
+      <div class="left">
+        <h3>gsap object : 1.0</h3>
+        <span>hover me!!!</span>
+        <pre>id='ss1'</pre>
+        <img
+          id="ss1"
+          class="img_hover"
+          src="./images/screenshots/ss1.png"
+          width="100%"
+          onmouseover="imageEnlarge(event,1,2,3,4,5,6)"
+        />
+      </div>
+      <div class="right">
+        <code>
+          <pre>
+            gsap
+            .to("#ss1", 
+            {   delay: 0, 
+                x: 350, 
+                y: 250, 
+                scaleX: 2, 
+                scaleY: 2 });
+        -----------------------------------------
+        code:--
+
+        document
+        .getElementById("ss1")
+        .addEventListener("mouseover", function () {
+            gsap
+            .to("#ss1", { delay: 0, x: 350, y: 250, scaleX: 2, scaleY: 2 });
+          });
+
+          document
+          .getElementById("ss1")
+          .addEventListener("mouseout", function () {
+            gsap
+            .to("#ss1", { delay: 0, x: 0, y: 0, scaleX: 1, scaleY: 1 });
+          });
+
+        --------------------------------------------
+         html:-   
+         
+         <....... onmouseover="imageEnlarge(event,1,2,3,4,5,6)"/>
+                                            -----
+         js:-
+
+          function imageEnlarge(e, ...args) {  
+                                -----
+               event.preventDefault();
+               console.log(e.target.id);            //ss1 or ss2
+               console.log(args);                   //[1, 2, 3, 4, 5, 6]
+            }
+
+    </pre
+          >
+        </code>
+      </div>
+    </div>
+    <hr />
+    <hr />
+    <hr />
     <script src="./js/script.js"></script>
   </body>
 </html>
