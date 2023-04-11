@@ -1,5 +1,8 @@
 console.log(gsap.version);
 
+// For basic animation control:
+gsap.registerPlugin(MotionPathPlugin);
+
 // document.getElementById("ss1").addEventListener("mouseover", function () {
 //   gsap.to("#ss1", { delay: 0, x: 350, y: 250, scaleX: 2, scaleY: 2 });
 // });
@@ -106,3 +109,34 @@ t1.to(
 
 //-------------------------------------------------
 // animation control methods
+let t2 = gsap.timeline({
+  repeat: 2,
+  repeatDelay: 5,
+  defaults: { duration: 12, ease: "power1.in" },
+});
+
+t2.to(
+  `.box_2`,
+  {
+    rotate: 3000,
+    backgroundColor: "green",
+  },
+  "<0.25"
+);
+
+document.getElementById(`Pause`).onclick = () => {
+  t2.pause();
+};
+
+document.getElementById(`Play`).onclick = () => {
+  t2.play();
+};
+document.getElementById(`Reverse`).onclick = () => {
+  t2.reverse();
+};
+document.getElementById(`Seek`).onclick = () => {
+  t2.seek(5);
+};
+document.getElementById(`Restart`).onclick = () => {
+  t2.restart();
+};

@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/style.css" />
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>
   </head>
 
   <body class="wapper">
@@ -203,7 +204,7 @@ X=0..10................................200......................................
 
                 gsap
                 .from(`#c2`, 5, { delay: 1, x: 500, repeat: -1});
-                
+
                 gsap
                 .fromTo(`#c3`, 5,{ x: 10}, { delay: 1, x: 200, repeat: -1});
 
@@ -354,6 +355,28 @@ X=0..10................................200......................................
         />
       </div>
       <div class="right">
+        <div class="area">
+          <div class="box_2"></div>
+          <div class="box_2"></div>
+          <div class="box_2"></div>
+          <div class="box_2"></div>
+          <div class="box_2"></div>
+          <div class="box_2"></div>
+          <div class="box_2"></div>
+          <div class="box_2"></div>
+          <div class="box_2"></div>
+        </div>
+        <br />
+        <br />
+        <hr />
+        <hr />
+        <br />
+        <br />
+        <button id="Pause">Pause</button>
+        <button id="Play">Play</button>
+        <button id="Reverse">Reverse</button>
+        <button id="Seek">Seek</button>
+        <button id="Restart">Restart</button>
         <code>
           <pre></pre>
         </code>
