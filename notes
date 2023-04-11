@@ -28,3 +28,18 @@ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js
 
 Extra Eases:
 https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CustomEase.min.js
+
+
+
+
+
+For basic animation control:
+https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js
+
+  html:
+    <script 
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js">
+    </script>
+
+  js:
+    gsap.registerPlugin(MotionPathPlugin);

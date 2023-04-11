@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   </head>
-  <body>
+
+  <body class="wapper">
     <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
@@ -21,6 +22,346 @@
       </p>
     <![endif]-->
     <h1>Creative Web Animation with GSAP 3</h1>
+    <hr />
+    <hr />
+    <hr />
+    <h2>basics : 1</h2>
+    <div class="sec content">
+      <div class="left">
+        <h3>gsap object : 1.0</h3>
+        <span>hover me!!!</span>
+        <pre>id='ss1'</pre>
+        <img
+          id="ss1"
+          class="img_hover"
+          src="./images/screenshots/ss1.png"
+          width="100%"
+          onmouseover="imageEnlarge(event,1,2,3,4,5,6)"
+        />
+      </div>
+      <div class="right">
+        <code>
+          <pre>
+            gsap
+            .to("#ss1", 
+            {   delay: 0, 
+                x: 350, 
+                y: 250, 
+                scaleX: 2, 
+                scaleY: 2 });
+        -----------------------------------------
+        code:--
+
+        document
+        .getElementById("ss1")
+        .addEventListener("mouseover", function () {
+            gsap
+            .to("#ss1", { delay: 0, x: 350, y: 250, scaleX: 2, scaleY: 2 });
+          });
+
+          document
+          .getElementById("ss1")
+          .addEventListener("mouseout", function () {
+            gsap
+            .to("#ss1", { delay: 0, x: 0, y: 0, scaleX: 1, scaleY: 1 });
+          });
+
+        --------------------------------------------
+         html:-   
+         
+         <....... onmouseover="imageEnlarge(event,1,2,3,4,5,6)"/>
+                                            -----
+         js:-
+
+          function imageEnlarge(e, ...args) {  
+                                -----
+               event.preventDefault();
+               console.log(e.target.id);            //ss1 or ss2
+               console.log(args);                   //[1, 2, 3, 4, 5, 6]
+            }
+
+    </pre
+          >
+        </code>
+      </div>
+    </div>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <div class="sec content">
+      <div class="left">
+        <h3>tween : 1.1</h3>
+        <span>hover me!!!</span>
+        <pre>id='ss2'</pre>
+        <img
+          id="ss2"
+          class="img_hover"
+          src="./images/screenshots/ss2.png"
+          width="100%"
+          onmouseover="imageEnlarge(event,7,8,9,0)"
+        />
+        <pre>--------------------------</pre>
+        <div class="box_area">
+          <div class="box red">
+            <p>hi!!!!</p>
+          </div>
+          <div class="box orange">
+            <p>hi!!!!</p>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <code>
+          <pre>
+            gsap
+            .to(".box",                   // target element
+                3,                        // duration
+                {                         // var
+                    delay: 1, 
+                    rotate:2880,
+                    skewX:45,
+                    fill:"yellow"
+                    ease:"power1.in"
+                }
+                );
+        -----------------------------------------
+        common Tweens used:---
+
+            gsap.to()
+            gsap.from()
+            gsap.fromTo()
+
+            eg:
+                gsap.to(`.box`, 5, {
+                    delay: 1,
+                    rotate: 2880,
+                    skewX: 10,
+                    backgroundColor: "green",
+                    color: "white",
+                    ease: "power1.in",
+                });
+
+    </pre
+          >
+        </code>
+      </div>
+    </div>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <div class="sec content">
+      <div class="left">
+        <h3>common methods : 1.2</h3>
+        <pre>id='ss3'</pre>
+        <img
+          id="ss3"
+          class="img_hover"
+          src="./images/screenshots/ss3.png"
+          width="100%"
+        />
+        <span>hover me!!!</span>
+        <pre>id='ss4'</pre>
+        <img
+          id="ss4"
+          class="img_hover"
+          src="./images/screenshots/ss4.png"
+          width="100%"
+          onmouseover="imageEnlarge(event)"
+        />
+      </div>
+      <div class="right">
+        <div class="circle_area">
+          <pre>
+X=0..10................................200......................................500</pre
+          >
+          <div id="c1" class="circle red">
+            <p>to()</p>
+          </div>
+          <div id="c2" class="circle orange">
+            <p>from()</p>
+          </div>
+          <div id="c3" class="circle blue">
+            <p>fromTo()</p>
+          </div>
+        </div>
+        <code>
+          <pre>
+
+            gsap.to()
+            gsap.from()
+            gsap.fromTo()
+
+            eg:
+                gsap
+                .to(`#c1`, 5, { delay: 1, x: 200,repeat: -1});
+
+                gsap
+                .from(`#c2`, 5, { delay: 1, x: 500, repeat: -1});
+                
+                gsap
+                .fromTo(`#c3`, 5,{ x: 10}, { delay: 1, x: 200, repeat: -1});
+
+        </pre
+          >
+        </code>
+      </div>
+    </div>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <div class="sec content">
+      <div class="left">
+        <h3>timeline : 1.3</h3>
+        <img
+          id="ss6"
+          class="img_hover"
+          src="./images/screenshots/ss6.png"
+          width="100%"
+        />
+        <span>hover me!!!</span>
+        <pre>id='ss5'</pre>
+        <img
+          id="ss5"
+          class="img_hover"
+          src="./images/screenshots/ss5.png"
+          width="100%"
+          onmouseover="imageEnlarge(event)"
+        />
+      </div>
+      <div class="right">
+        <div class="area">
+          <div class="box_1"></div>
+          <div class="box_1"></div>
+          <div class="box_1"></div>
+          <div class="box_1"></div>
+          <div class="box_1"></div>
+          <div class="box_1"></div>
+          <div class="box_1"></div>
+          <div class="box_1"></div>
+          <div class="box_1"></div>
+          <div class="box_1"></div>
+          <div class="box_1"></div>
+          <div class="box_1"></div>
+        </div>
+        <code>
+          <pre>
+
+
+            let t1 = gsap.timeline({
+                defaults: { duration: 1, ease: "power1.in", yoyo: true, repeat: -1 },
+              });
+              
+              t1.to(`.box_1`, 5, {
+                rotate: 300,
+                backgroundColor: "red",
+              },
+              "<0.25");
+
+
+          </pre>
+        </code>
+      </div>
+    </div>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <div class="sec content">
+      <div class="left">
+        <h3>postion : 1.4</h3>
+        <img
+          id="ss7"
+          class="img_hover"
+          src="./images/screenshots/ss7.png"
+          width="100%"
+        />
+
+        <pre>id='ss8'</pre>
+        <img
+          id="ss8"
+          class="img_hover"
+          src="./images/screenshots/ss8.png"
+          width="100%"
+        />
+        <pre>id='ss9'</pre>
+        <img
+          id="ss9"
+          class="img_hover"
+          src="./images/screenshots/ss9.png"
+          width="100%"
+        />
+      </div>
+      <div class="right">
+        <code>
+          <pre></pre>
+        </code>
+      </div>
+    </div>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <div class="sec content">
+      <div class="left">
+        <h3>basic animation control methods : 1.5</h3>
+        <img
+          id="ss10"
+          class="img_hover"
+          src="./images/screenshots/ss10.png"
+          width="100%"
+        />
+
+        <pre>id='ss11'</pre>
+        <img
+          id="ss11"
+          class="img_hover"
+          src="./images/screenshots/ss11.png"
+          width="100%"
+          onmouseover="imageEnlarge(event)"
+        />
+        <img
+          id="ss12"
+          class="img_hover"
+          src="./images/screenshots/ss12.png"
+          width="100%"
+        />
+        <img
+          id="ss13"
+          class="img_hover"
+          src="./images/screenshots/ss13.png"
+          width="100%"
+        />
+        <pre>id='ss14'</pre>
+        <img
+          id="ss14"
+          class="img_hover"
+          src="./images/screenshots/ss14.png"
+          width="100%"
+          onmouseover="imageEnlarge(event)"
+        />
+      </div>
+      <div class="right">
+        <code>
+          <pre></pre>
+        </code>
+      </div>
+    </div>
+    <hr />
+    <hr />
+    <hr />
     <script src="./js/script.js"></script>
   </body>
 </html>
